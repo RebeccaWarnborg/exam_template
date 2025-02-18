@@ -13,8 +13,16 @@ class Player:
         self.pos_x += dx
         self.pos_y += dy
 
-    def can_move(self, x, y, grid):
-        return True
-        #TODO: returnera True om det inte står något i vägen
+    def can_move(self, dx, dy, grid):
+        """Kollar om spelaren kan flytta sig i en viss riktning."""
+        new_x = self.pos_x + dx
+        new_y = self.pos_y + dy
+
+    # Om nästa position innehåller en vägg, returnera False
+        if grid.get(new_x, new_y) == grid.wall:
+            return False
+    
+        return True  # Annars kan vi gå hit    
+
 
 

@@ -34,6 +34,14 @@ while not command.casefold() in ["q", "x"]:
         # TODO: skapa funktioner, så vi inte behöver upprepa så mycket kod för riktningarna "W,A,S"
         maybe_item = g.get(player.pos_x + 1, player.pos_y)
         player.move(1, 0)
+    if command == "w" and player.can_move(0, -1, g):  # Uppåt
+        player.move(0, -1)
+    elif command == "a" and player.can_move(-1, 0, g):  # Vänster
+        player.move(-1, 0)
+    elif command == "s" and player.can_move(0, 1, g):  # Nedåt
+        player.move(0, 1)
+    elif command == "d" and player.can_move(1, 0, g):  # Höger
+        player.move(1, 0)
 
         if isinstance(maybe_item, pickups.Item):
             # we found something
