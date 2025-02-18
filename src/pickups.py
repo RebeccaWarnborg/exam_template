@@ -1,7 +1,7 @@
 
 class Item:
     """Representerar saker man kan plocka upp."""
-    def __init__(self, name, value=10, symbol="?"):
+    def __init__(self, name, value=20, symbol="?"):
         self.name = name
         self.value = value
         self.symbol = symbol
@@ -10,8 +10,16 @@ class Item:
         return self.symbol
 
 
-pickups = [Item("carrot"), Item("apple"), Item("strawberry"), Item("cherry"), Item("watermelon"), Item("radish"), Item("cucumber"), Item("meatball")]
-
+#pickups = [Item("carrot"), Item("apple"), Item("strawberry"), Item("cherry"), Item("watermelon"), Item("radish"), Item("cucumber"), Item("meatball")]
+pickups = [
+    Item("carrot", 20),
+    Item("apple", 20),
+    Item("strawberry", 20),
+    Item("cherry", 20),
+    Item("watermelon", 20),
+    Item("radish", 20),
+    Item("cucumber", 20),
+    Item("meatball", 10) ] # Köttbullen får vara kvar på 10 poäng
 
 def randomize(grid):
     for item in pickups:
