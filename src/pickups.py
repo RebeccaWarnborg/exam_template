@@ -19,7 +19,7 @@ pickups = [
     Item("watermelon", 20),
     Item("radish", 20),
     Item("cucumber", 20),
-    Item("meatball", 10) ] # Köttbullen får vara kvar på 10 poäng
+    Item("meatball", 10) ] # Köttbullen är kvar på 10 poäng
 
 def randomize(grid):
     for item in pickups:

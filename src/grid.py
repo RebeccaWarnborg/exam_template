@@ -53,6 +53,29 @@ class Grid:
             self.set(j, 0, self.wall)
             self.set(j, self.height - 1, self.wall)
 
+            # L-väggar, hinder för spelaren.
+        for x in range(5, 10):  
+             self.set(x, 4, self.wall)  
+        for y in range(4, 8):  
+             self.set(9, y, self.wall)  
+
+       
+        for x in range(15, 20):  
+             self.set(x, 7, self.wall)  
+        for y in range(7, 11):  
+             self.set(19, y, self.wall)  
+
+    
+        for x in range(25, 30):  
+             self.set(x, 5, self.wall)  
+        for y in range(5, 9):  
+             self.set(29, y, self.wall)  
+
+         # Öppningar i väggarna
+        self.set(9, 6, self.empty)  
+        self.set(19, 9, self.empty)  
+        self.set(29, 7, self.empty)  
+
 
     # Används i filen pickups.py
     def get_random_x(self):

@@ -18,11 +18,11 @@ class Player:
         new_x = self.pos_x + dx
         new_y = self.pos_y + dy
 
-    # Om nästa position innehåller en vägg, returnera False
+    # Om en position innehåller en vägg, returneras False
         if grid.get(new_x, new_y) == grid.wall:
             return False
     
-        return True  # Annars kan vi gå hit    
+        return True  # Annars returneras True   
 
 
 
